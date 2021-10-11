@@ -5,40 +5,53 @@ Module 17 Challenge Files
 - [Screenshots](https://github.com/aseo67/Credit_Risk_Analysis/tree/main/Screenshots)
 
 ## Overview of Analysis
-asdf
+LendingClub, a peer to peer lending services company, is exploring usage of machine learning to predict credit risk. This analysis builds and evaluates several machine learning models/algorithms to predict credit risk ("high_risk" vs. "low_risk"). The models tested are:
+- Naive Random Oversampling (with _RandomOverSampler_ algorithm)
+- SMOTE Oversampling (with _SMOTE_ algorithm)
+- Undersampling (with _ClusterCentroids_ algorithm
+- Combination (Over and Under) Sampling (with _SMOTEENN_ algorithm)
+- 2 additional machine learning models that reduce bias
+  - Balanced Random Forest Classifier (with _BalancedRandomForestClassifier_)
+  - Easy Ensemble AdaBoost Classifier (with _EasyEnsembleClassifier_)
 
 ## Results
 
 - Naive Random Oversampling
-  - ![Screenshot]()
-  - Balanced Accuracy Score
-  - Precision
-  - Recall
+  - Balanced Accuracy Score: ~0.65
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_RandomOversampling%20AccuracyScore.png)
+  - Precision: "high_risk" = 0.01, "low_risk" = 1.00
+  - Recall: "high_risk" = 0.74, "low_risk" = 0.56
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_RandomOversampling%20ClassificationReport.png)
 - SMOTE Oversampling
-  - ![Screenshot]()
-  - Balanced Accuracy Score
-  - Precision
-  - Recall
+  - Balanced Accuracy Score: ~0.65
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_SMOTE%20AccuracyScore.png)
+  - Precision: "high_risk" = 0.01, "low_risk" = 1.00
+  - Recall: "high_risk" = 0.62, "low_risk" = 0.69
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_SMOTE%20ClassificationReport.png)
 - Undersampling
-  - ![Screenshot]()
-  - Balanced Accuracy Score
-  - Precision
-  - Recall
+  - Balanced Accuracy Score: ~0.54
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_UnderSampling%20AccuracyScore.png)
+  - Precision: "high_risk" = 0.01, "low_risk" = 1.00
+  - Recall: "high_risk" = 0.69, "low_risk" = 0.40
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_UnderSampling%20ClassificationReport.png)
 - SMOTEENN (Combination) Sampling
-  - ![Screenshot]()
-  - Balanced Accuracy Score
-  - Precision
-  - Recall
+  - Balanced Accuracy Score: ~0.68
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_SMOTEENN%20AccuracyScore.png)
+  - Precision: "high_risk" = 0.01, "low_risk" = 1.00
+  - Recall: "high_risk" = 0.80, "low_risk" = 0.56
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_SMOTEENN%20ClassificationReport.png)
 - Balanced Random Forest Classifier
-  - ![Screenshot]()
-  - Balanced Accuracy Score
-  - Precision
-  - Recall
+  - Balanced Accuracy Score: ~0.79
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_RandomForest%20AccuracyScore.png)
+  - Precision: "high_risk" = 0.03, "low_risk" = 1.00
+  - Recall: "high_risk" = 0.70, "low_risk" = 0.87
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_RandomForest%20ClassificationReport.png)
 - Easy Ensemble AdaBoost Classifier
-  - ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_EasyEnsemble%20AccuracyScore.png)
-  - Balanced Accuracy Score
-  - Precision
-  - Recall
+  - Balanced Accuracy Score: ~0.93
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_EasyEnsemble%20AccuracyScore.png)
+  - Precision: "high_risk" = 0.09, "low_risk" = 1.00
+  - Recall: "high_risk" = 0.92, "low_risk" = 0.94
+    ![Screenshot](https://github.com/aseo67/Credit_Risk_Analysis/blob/main/Screenshots/Screenshot_EasyEnsemble%20ClassificationReport.png)
 
 
 ## Summary
