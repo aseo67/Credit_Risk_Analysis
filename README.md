@@ -55,5 +55,6 @@ LendingClub, a peer to peer lending services company, is exploring usage of mach
 
 
 ## Summary
-_Summary of results_
+Of all the models tested, the **Easy Ensemble AdaBoost Classifier** produces the strongest results, with a high accuracy score of ~0.93
+With either oversampling technique
 _Reco on which model to use, or there's not reco with a justification_
