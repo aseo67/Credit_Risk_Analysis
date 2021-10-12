@@ -61,4 +61,5 @@ However, we also tried a couple ensemble classifiers, as these are models that a
 
 Finally, the last model tested was the **Easy Ensemble AdaBoost Classifier** and this produced the strongest accuracy of ~0.93, stronger precision and recall than any of the other models tested. 
 
+### Recommendation
 Given these results, the Easy Ensemble AdaBoost Classifier seems like the best method to move forward with. However, there are a lot of features used in these models - it is likely worth narrowing down the list to exclude the lower ranked features to see if we can improve the model further. 
