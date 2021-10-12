@@ -55,14 +55,10 @@ LendingClub, a peer to peer lending services company, is exploring usage of mach
 
 
 ## Summary
-Given the disparate number of "low_risk" vs. "high_risk" loans, some adjustment is needed to accommodate this class imbalance. First, two oversampling methods were used: Random Oversampling and SMOTE Oversampling. Both produced accuracy scores ~0.65 and similar precision scores. In terms of precision, these two oversampling techniques see very high precision (1.00) for identifying low risk loans, but low precision for identifying high risk loans, which indicates that a large number of "low_risk" loans were marked as "high_risk". In terms of recall, the Random Oversampling method is a bit more sensitive when identifyin high risk loans. 
+Given the disparate number of "low_risk" vs. "high_risk" loans, some adjustment is needed to accommodate this class imbalance. First, two oversampling methods were used: Random Oversampling and SMOTE Oversampling. Both produced accuracy scores ~0.65 and similar precision scores, but recall was similar between "high_risk" and "low_risk" for the SMOTE Oversampling, whereas there was a wider gap in recall between the two loan types for the Random Oversampling. Next, Undersampling was used, but it resulted in lower accuracy - with a balanced accuracy score of 0.54. Then, the combination method using SMOTEENN was run, and this performed the best out of the resampling methods used so far, with an accuracy score of 0.68. Across all of these similar precision was observed.
 
-Next, Undersampling was used
+However, we also tried a couple ensemble classifiers, as these are models that also help to reduce bias. First, using a RandomForest Classifier, much stronger results were observed - an accuracy score of 0.79 and stronger precision for "high_risk" loans and stronge recall than the aforementioned resampling methods. 
 
-Then, the combination method using SMOTEENN was run
+Finally, the last model tested was the **Easy Ensemble AdaBoost Classifier** and this produced the strongest accuracy of ~0.93, stronger precision and recall than any of the other models tested. 
 
-Then, we tried using a RandomForest Classifier
-
-Finally, of all the models tested, the last model tested - the **Easy Ensemble AdaBoost Classifier** - produces the strongest accuracy of ~0.93. While it does a better job than other models in terms of precision ("high_risk" precision = 0.09), the precision of identifying high risk loans is still low whereas low risk loans are well-identified
-With either oversampling technique
-_Reco on which model to use, or there's not reco with a justification_
+Given these results, the Easy Ensemble AdaBoost Classifier seems like the best method to move forward with. However, there are a lot of features used in these models - it is likely worth narrowing down the list to exclude the lower ranked features to see if we can improve the model further. 
